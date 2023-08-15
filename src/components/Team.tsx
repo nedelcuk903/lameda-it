@@ -41,7 +41,7 @@ const managers = [
         imageUrl: '/m3.jpg'
     },
     {
-        name: 'Виктор Марчук',
+        name: 'Андрей Бежанов',
         role: 'менеджер по трудоустройству',
         imageUrl: '/m4.jpg'
     },
