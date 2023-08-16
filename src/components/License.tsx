@@ -9,14 +9,23 @@ export default function License() {
 
 
             <div className="grid grid-cols-1 gap-10 mx-auto max-w-4xl">
-                <AnimatedElement direction="right">
-                    <div className="grid gap-1">
-                        <a href="/file1.pdf" download className="w-full flex flex-col align-middle justify-center gap-3">
-                            <img src="/license.png" alt="license" className="cursor-pointer" />
-                            <span className="text-slate-200 text-center w-full">License</span>
-                        </a>
-                    </div>
-                </AnimatedElement>
+                <div className="grid gap-2 grid-cols-1">
+
+                    <a href="/file1.pdf" download className="w-full flex flex-col align-middle justify-center gap-3">
+                        <AnimatedElement direction="bottom">
+                            <img src="/license.png" alt="license" className="cursor-pointer w-full" />
+                        </AnimatedElement>
+                        <span className="text-slate-200 text-center w-full">License</span>
+                    </a>
+
+                    <a href="https://find-and-update.company-information.service.gov.uk/company/12038800" className="w-full flex flex-col align-middle justify-center gap-3">
+                        <AnimatedElement direction="bottom">
+                            <img src="/verification.jpg" alt="license" className="cursor-pointer w-full" />
+                        </AnimatedElement>
+                        <span className="text-slate-200 text-center w-full">Verification</span>
+                    </a>
+
+                </div>
             </div>
         </div >
     )
