@@ -54,41 +54,39 @@ export default function Example() {
 
                 <div className="space-y-10 flex flex-col justify-center">
                     {reviews.map((review) => (
-                        <div key={review.id} className="flex flex-col sm:flex-row">
-                            <AnimatedElement direction='bottom'>
-                                <>
-                                    <div className="order-2 mt-6 sm:mt-0 ">
-                                        <h3 className="text-sm font-medium text-gray-900">{review.title}</h3>
-                                        <p className="sr-only">{review.rating} out of 5 stars</p>
+                        <AnimatedElement direction='bottom' key={review.id}>
+                            <div className="flex flex-col sm:flex-row sm:gap-4 gap-1">
+                                <div className="order-2 mt-6 sm:mt-0 ">
+                                    <h3 className="text-sm font-medium text-gray-900">{review.title}</h3>
+                                    <p className="sr-only">{review.rating} out of 5 stars</p>
 
-                                        <div
-                                            className="mt-3 space-y-6 text-sm text-gray-600"
-                                            dangerouslySetInnerHTML={{ __html: review.content }}
-                                        />
-                                    </div>
+                                    <div
+                                        className="mt-3 space-y-6 text-sm text-gray-600"
+                                        dangerouslySetInnerHTML={{ __html: review.content }}
+                                    />
+                                </div>
 
-                                    <div className="order-1 flex items-center sm:flex-col sm:items-start ">
-                                        <img src={review.avatarSrc} alt={`${review.author}.`} className="h-12 w-12 rounded-full object-cover" />
+                                <div className="order-1 flex items-center sm:flex-col sm:items-start">
+                                    <img src={review.avatarSrc} alt={`${review.author}.`} className="h-12 w-12 rounded-full object-cover" />
 
-                                        <div className="ml-4 sm:ml-0 sm:mt-4">
-                                            <p className="text-sm font-medium text-gray-900">{review.author}</p>
-                                            <div className="mt-2 flex items-center">
-                                                {[0, 1, 2, 3, 4].map((rating) => (
-                                                    <StarIcon
-                                                        key={rating}
-                                                        className={classNames(
-                                                            review.rating > rating ? 'text-cyan-600' : 'text-slate-300',
-                                                            'h-5 w-5 flex-shrink-0'
-                                                        )}
-                                                        aria-hidden="true"
-                                                    />
-                                                ))}
-                                            </div>
+                                    <div className="ml-4 sm:ml-0 sm:mt-4">
+                                        <p className="text-sm font-medium text-gray-900">{review.author}</p>
+                                        <div className="mt-2 flex items-center">
+                                            {[0, 1, 2, 3, 4].map((rating) => (
+                                                <StarIcon
+                                                    key={rating}
+                                                    className={classNames(
+                                                        review.rating > rating ? 'text-cyan-600' : 'text-slate-300',
+                                                        'h-5 w-5 flex-shrink-0'
+                                                    )}
+                                                    aria-hidden="true"
+                                                />
+                                            ))}
                                         </div>
                                     </div>
-                                </>
-                            </AnimatedElement>
-                        </div>
+                                </div>
+                            </div>
+                        </AnimatedElement>
                     ))}
                 </div>
             </div>

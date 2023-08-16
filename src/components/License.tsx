@@ -8,7 +8,7 @@ export default function License() {
             </AnimatedElement>
 
 
-            <div className="grid gap-2 grid-cols-1">
+            <div className="grid gap-2 grid-cols-1 mx-auto max-w-xl">
 
                 <a href="/file1.pdf" download className="w-full flex flex-col align-middle justify-center gap-3">
                     <AnimatedElement direction="bottom">
